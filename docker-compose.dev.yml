@@ -31,7 +31,7 @@ services:
             BABEL_ENV: ${BABEL_ENV:-node}
             LOG_LEVEL: ${LOG_LEVEL:-verbose}
             APP_NAME: ${APP_NAME:-SlackClone}
-            APP_ID: ${APP_ID:-trkr}
+            APP_ID: ${APP_ID:-slack}
             PG_HOST: postgres
             PG_PORT: 5432
             PG_DATABASE: ${PG_DATABASE:-postgres}
