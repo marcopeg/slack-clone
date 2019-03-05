@@ -14,9 +14,10 @@ require('isomorphic-fetch')
 const services = [
     require('./services/env'),
     require('./services/logger'),
+    require('./services/status'),
     // require('./services/hash'),
     // require('./services/jwt'),
-    // require('./services/express'),
+    require('./services/express'),
     // require('./services/postgres'),
     // require('./services/express/static'),
     // require('./services/express/cookie-helper'),
@@ -61,48 +62,48 @@ registerAction({
         //     models: [],
         // }]
 
-        // settings.express = {
-        //     nodeEnv: config.get('NODE_ENV'),
-        //     port: config.get('SERVER_PORT'),
-        //     static: [
-        //         {
-        //             path: '/static',
-        //             source: path.join(process.cwd(), 'build', 'static'),
-        //         },
-        //         {
-        //             path: '/manifest.json',
-        //             source: path.join(process.cwd(), 'build'),
-        //         },
-        //         {
-        //             path: '/favicon.ico',
-        //             source: path.join(process.cwd(), 'build'),
-        //         },
-        //     ],
-        //     locale: {
-        //         cookieName: `${String(config.get('APP_ID'))}--locale`,
-        //     },
-        //     cookieHelper: {
-        //         scope: String(config.get('APP_ID')),
-        //         duration: String(config.get('LOGIN_DURATION')),
-        //     },
-        //     deviceId: {
-        //         scope: 'xDeviceId',
-        //         header: 'x-device-id',
-        //     },
-        //     graphql: {
-        //         mountPoint: config.get('GRAPHQL_MOUNT_POINT'),
-        //     },
-        //     reactSSR: {
-        //         initialState: {
-        //             app: {
-        //                 name: String(config.get('APP_NAME')),
-        //             },
-        //             storage: {
-        //                 scope: String(config.get('APP_ID')),
-        //             },
-        //         },
-        //     },
-        // }
+        settings.express = {
+            nodeEnv: config.get('NODE_ENV'),
+            port: config.get('SERVER_PORT'),
+            // static: [
+            //     {
+            //         path: '/static',
+            //         source: path.join(process.cwd(), 'build', 'static'),
+            //     },
+            //     {
+            //         path: '/manifest.json',
+            //         source: path.join(process.cwd(), 'build'),
+            //     },
+            //     {
+            //         path: '/favicon.ico',
+            //         source: path.join(process.cwd(), 'build'),
+            //     },
+            // ],
+            // locale: {
+            //     cookieName: `${String(config.get('APP_ID'))}--locale`,
+            // },
+            // cookieHelper: {
+            //     scope: String(config.get('APP_ID')),
+            //     duration: String(config.get('LOGIN_DURATION')),
+            // },
+            // deviceId: {
+            //     scope: 'xDeviceId',
+            //     header: 'x-device-id',
+            // },
+            // graphql: {
+            //     mountPoint: config.get('GRAPHQL_MOUNT_POINT'),
+            // },
+            // reactSSR: {
+            //     initialState: {
+            //         app: {
+            //             name: String(config.get('APP_NAME')),
+            //         },
+            //         storage: {
+            //             scope: String(config.get('APP_ID')),
+            //         },
+            //     },
+            // },
+        }
 
         // settings.graphqlTest = {
         //     isEnabled: [ 'development', 'test' ].indexOf(process.env.NODE_ENV) !== -1,
