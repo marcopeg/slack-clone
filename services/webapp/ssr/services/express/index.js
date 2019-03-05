@@ -11,6 +11,10 @@ const app = express()
 export const init = async (settings) => {
     logInfo('[express] init...')
 
+    if (!settings) {
+        throw new Error('[express] no settings were given')
+    }
+
     // hook - enable a tracing context that is scoped
     // into the current request
     app.use(createHookContext(settings.hooks || {}))

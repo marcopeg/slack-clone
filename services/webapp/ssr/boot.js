@@ -1,4 +1,4 @@
-import path from 'path'
+// import path from 'path'
 import * as config from '@marcopeg/utils/lib/config'
 import {
     registerAction,
@@ -8,8 +8,8 @@ import {
     FINISH,
 } from '@marcopeg/hooks'
 
-require('es6-promise').polyfill()
-require('isomorphic-fetch')
+// require('es6-promise').polyfill()
+// require('isomorphic-fetch')
 
 const services = [
     require('./services/env'),
@@ -40,9 +40,9 @@ registerAction({
     hook: SETTINGS,
     name: '♦ boot',
     handler: ({ settings }) => {
-        // settings.hash = {
-        //     rounds: Number(config.get('BCRYPT_ROUNDS')),
-        // }
+        settings.hash = {
+            rounds: Number(config.get('BCRYPT_ROUNDS')),
+        }
 
         // settings.jwt = {
         //     secret: String(config.get('JWT_SECRET')),
@@ -119,7 +119,7 @@ registerAction({
 })
 
 export default createHookApp({
-    settings: { cwd: process.cwd() },
+    settings: {},
     services,
     features,
 })
