@@ -7,7 +7,7 @@ import { EXPRESS_ROUTE, EXPRESS_GRAPHQL } from './hooks'
 const info = {
     description: 'Provides info regarding the project',
     type: GraphQLString,
-    resolve: () => `${ssr.name} v${ssr.version}`,
+    resolve: () => `${ssr.name}@${ssr.version}`,
 }
 
 export const createGraphQLHandler = async () => {

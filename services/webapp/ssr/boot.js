@@ -23,12 +23,13 @@ const services = [
     // require('./services/express/cookie-helper'),
     // require('./services/express/locale'),
     // require('./services/express/device-id'),
-    // require('./services/express/graphql'),
+    require('./services/express/graphql'),
     // require('./services/express/graphql-test'),
     // require('./services/express/ssr'),
 ]
 
 const features = [
+    require('./features/marco-mood'),
     // require('./features/foo'),
     // require('./features/fii'),
     // require('./features/locale'),
@@ -90,9 +91,9 @@ registerAction({
             //     scope: 'xDeviceId',
             //     header: 'x-device-id',
             // },
-            // graphql: {
-            //     mountPoint: config.get('GRAPHQL_MOUNT_POINT'),
-            // },
+            graphql: {
+                mountPoint: config.get('GRAPHQL_MOUNT_POINT'),
+            },
             // reactSSR: {
             //     initialState: {
             //         app: {
