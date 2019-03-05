@@ -30,7 +30,7 @@ services:
             NODE_ENV: ${NODE_ENV:-development}
             BABEL_ENV: ${BABEL_ENV:-node}
             LOG_LEVEL: ${LOG_LEVEL:-verbose}
-            APP_NAME: ${APP_NAME:-TrackerApp}
+            APP_NAME: ${APP_NAME:-SlackClone}
             APP_ID: ${APP_ID:-trkr}
             PG_HOST: postgres
             PG_PORT: 5432
