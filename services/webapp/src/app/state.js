@@ -8,6 +8,7 @@ const features = [
     require('features/records'),
     require('features/pages'),
     require('features/mobile'),
+    require('features/channels-list'),
 ]
 
 const app = (state = {

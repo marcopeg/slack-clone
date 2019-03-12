@@ -30,6 +30,7 @@ const services = [
 
 const features = [
     require('./features/marco-mood'),
+    require('./features/channels-list'),
     // require('./features/foo'),
     // require('./features/fii'),
     // require('./features/locale'),

@@ -11,6 +11,8 @@ import MobilePage, {
     mixins,
 } from 'components/MobilePage'
 
+import { ChannelsList } from 'features/channels-list'
+
 const messages = defineMessages({
     title: {
         id: 'pages.HomePage.title',
@@ -84,6 +86,8 @@ const HomePage = ({ hasLogin, intl }) => (
                             </Button>
                         </React.Fragment>
                     )}
+                    <hr />
+                    <ChannelsList />
                 </div>
             </div>
         </MobilePage.Body>
